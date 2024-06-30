@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='result.css') }}">
+    <title>Retrieved Results</title>
+</head>
+<body>
+    <div style = "width: 100%;
+    text-align: center;">
+
+
+        <div style = "text-align: center;
+        display: inline-block;
+        
+    border: 5px solid #ddddd0;
+    background-color:#343434;
+    color:azure;
+    margin-bottom: 20px;
+    padding: 5px;
+    width: 900px;
+    height: fit-content;
+    white-space: pre-wrap;
+    border-radius: 30px;
+    font-size: 20px;
+    align-self: center; 
+    justify-content: center;">
+
+    <h2 style="color: seagreen;">Entered Query Belongs to Poem</h2>
+    {{matchingPoem[0].name.split("_")[0].upper()}} -- {{matchingPoem[0].name.split("_")[1].split(".")[0]}}
+      
+        <p >{{matchingPoem[0].text}}</p>
+    </div>
+   <br>
+   <br>
+<div style="text-align: center;
+    display: flex; 
+    background-color:#343434;
+
+    align-items: top;
+    justify-content: space-evenly;
+    border: 4px solid #ddddd0;
+   
+    border-radius: 30px;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    
+    justify-content: center;
+    height: fit-content;
+    margin-top: 30px;
+    " >
+    <div style="color:seagreen;
+        font-size: 20px;
+       ">
+        <span style="font-size: 25px;">Best Matching Poem</span>
+        <br>
+        {%for i in range(0, len1)%}
+        <a style="color: azure;;font-size: 20px; " onMouseOver="this.style.color='blue'" onMouseOut="this.style.color='white'" href='poem/{{matchingPoem[i].name}}'><br>{{matchingPoem[i].name.split("_")[0]}}--{{matchingPoem[i].name.split("_")[1].split(".")[0]}}</a><br>
+        
+        {%endfor%}
+    </div>
+    
+    
+    <div style="color: seagreen;
+        font-size: 20px;
+         ">
+        <span style="font-size: 25px;">Best Suggestion Poem</span>
+        <br>
+        {%for i in range(0, len2)%}
+        <a style="color: azure;font-size: 20px;" onMouseOver="this.style.color='blue'" onMouseOut="this.style.color='white'" href='poem_suggested/{{suggestions[i].name}}'><br>{{suggestions[i].name.split("_")[0]}}--{{suggestions[i].name.split("_")[1].split(".")[0]}}</a><br>
+        {%endfor%}
+    </div>
+    
+
+</div>
+
+    </div>
+    
+
+</body>
+</html>
