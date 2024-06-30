@@ -12,7 +12,7 @@ The *PIRS* UI looks like following:
 # To Run This Repo
 *1. Clone the Repo*
 
-> Download the pickle files from [here](https://drive.google.com/drive/folders/1cCUZ6woLVC89NDFS0wQYtUmbJozj8yYK?usp=sharing) or use the link in "Link_to_pickle" file for fast execution and loading of pages.
+> Download the pickle files from [here](https://drive.google.com/drive/folders/1W04aOVtut_-4mTxcm3P94mHJAZW7jqF1?usp=drive_link) or use the link in "Link_to_pickle" file for fast execution and loading of pages.
 
 *2. Run app.py file in your system*
 
